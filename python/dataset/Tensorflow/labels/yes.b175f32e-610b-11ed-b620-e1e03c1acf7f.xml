@@ -1,0 +1,25 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>yes.b175f32e-610b-11ed-b620-e1e03c1acf7f.jpg</filename>
+	<path>/my-project-name/yes.b175f32e-610b-11ed-b620-e1e03c1acf7f.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>yes</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>193</xmin>
+			<ymin>139</ymin>
+			<xmax>416</xmax>
+			<ymax>455</ymax>
+		</bndbox>
+	</object>
+</annotation>

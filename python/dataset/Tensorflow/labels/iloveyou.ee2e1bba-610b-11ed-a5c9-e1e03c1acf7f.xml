@@ -1,0 +1,25 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>iloveyou.ee2e1bba-610b-11ed-a5c9-e1e03c1acf7f.jpg</filename>
+	<path>/my-project-name/iloveyou.ee2e1bba-610b-11ed-a5c9-e1e03c1acf7f.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>iloveyou</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>42</xmin>
+			<ymin>225</ymin>
+			<xmax>463</xmax>
+			<ymax>388</ymax>
+		</bndbox>
+	</object>
+</annotation>
