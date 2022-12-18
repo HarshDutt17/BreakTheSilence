@@ -42,6 +42,7 @@ function App() {
   const canvasRef = useRef(null);
 
   const [emoji, setEmoji] = useState(null);
+  const [interpretedText, setInterpretedText] = useState("Interpreted Text Will be here")
   const images = {
     thumbs_up: thumbs_up,
     victory: victory,
@@ -59,6 +60,26 @@ function App() {
     point_left: point_left,
     point_right: point_right,
     raised_fist: raised_fist
+  };
+
+  const texts = {
+    null: "Your interpreted text will be here",
+    thumbs_up: "Yea! I am alright.",
+    victory: "I am ready.",
+    thumbs_down: "No!",
+    middle_finger: "Piss off",
+    ok_sign: "Seems good",
+    pinched_finger: "A little please",
+    pinched_hand: "Stop talking!",
+    raised_hand: "Stop!",
+    love_you: "I Love You",
+    rock_on: "Lets party!",
+    call_me: "Call me",
+    point_up: "Look Up",
+    point_down: "Look below",
+    point_left: "Theres something to your left",
+    point_right: "Theres something to your right",
+    raised_fist: "Dont make me angry!"
   };
 
   const runHandpose = async () => {
@@ -131,7 +152,7 @@ function App() {
       <header className="bg-white">
         <h1 className="text-3xl font-medium text-center py-4 tracking-widest"><span className="text-5xl font-bold">B</span>reak <span className="text-5xl font-bold">T</span>he <span className="text-5xl font-bold">S</span>ilence</h1>
       </header>
-      <div className="App-camera my-16">
+      <div className="App-camera mt-12">
         <Webcam ref={webcamRef}
           className="rounded-lg border-2 drop-shadow-md"
           style={{
@@ -181,7 +202,9 @@ function App() {
             <p>Turn Your Camera On</p>
           </div>
         )}
+
       </div>
+      <p className="text-white text-3xl text-center py-4">{texts[emoji]}</p>
     </div>
   );
 }
