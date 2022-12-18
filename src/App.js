@@ -105,6 +105,7 @@ function App() {
           RaisedFistGesture
         ])
         const gesture = await GE.estimate(hand[0].landmarks, 8);
+        console.log(gesture)
         if (gesture.gestures !== undefined && gesture.gestures.length > 0) {
           const confidence = gesture.gestures.map(
             (prediction) => prediction.score
@@ -126,9 +127,13 @@ function App() {
   runHandpose();
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App bg-blue-500 min-h-screen">
+      <header className="bg-white">
+        <h1 className="text-3xl font-medium text-center py-4 tracking-widest"><span className="text-5xl font-bold">B</span>reak <span className="text-5xl font-bold">T</span>he <span className="text-5xl font-bold">S</span>ilence</h1>
+      </header>
+      <div className="App-camera my-16">
         <Webcam ref={webcamRef}
+          className="rounded-lg border-2 drop-shadow-md"
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -161,16 +166,22 @@ function App() {
               marginLeft: "auto",
               marginRight: "auto",
               left: 400,
-              bottom: 500,
+              bottom: 400,
               right: 0,
               textAlign: "center",
               height: 100,
             }}
           />
         ) : (
-          ""
+          <div className="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+            </svg>
+            <p>Turn Your Camera On</p>
+          </div>
         )}
-      </header>
+      </div>
     </div>
   );
 }
